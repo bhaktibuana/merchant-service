@@ -1,0 +1,31 @@
+{
+  "name": "merchant-service",
+  "version": "1.0.0",
+  "description": "merchant-service is a mini-project from Dibimbing course in the form of API server that used to handle the catalog of products owned by merchants.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhaktibuana/merchant-service.git"
+  },
+  "author": "Bhakti Mega Buana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhaktibuana/merchant-service/issues"
+  },
+  "homepage": "https://github.com/bhaktibuana/merchant-service#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15",
+    "validator": "^13.7.0",
+    "validatorjs": "^3.22.1"
+  }
+}
