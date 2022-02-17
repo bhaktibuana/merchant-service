@@ -1,8 +1,10 @@
 const express = require("express");
 const productRoutes = require("../controllers/product.controller");
 const merchantRoutes = require("../controllers/merchant.controller");
+const loginRoutes = require("../controllers/login.controller");
 const productMiddleware = require("../middlewares/product.middleware");
 const merchantMiddleware = require("../middlewares/merchant.middleware");
+const loginMiddleware = require("../middlewares/login.middleware");
 
 const router = express.Router();
 
@@ -25,5 +27,8 @@ router.put("/merchant/:id", merchantMiddleware.updateValidation, merchantRoutes.
 router.put("/merchant/updatePassword/:id", merchantMiddleware.updatePasswordValidation, merchantRoutes.updateMerchantPassword);
 router.put("/merchant/softDelete/:id", merchantMiddleware.deleteValidaiton, merchantRoutes.softDeleteMerchant);
 router.delete("/merchant/:id", merchantMiddleware.deleteValidaiton, merchantRoutes.deleteMerchant);
+
+// login router
+router.post("/login", loginMiddleware.loginValidation, loginRoutes.login);
 
 module.exports = router;
