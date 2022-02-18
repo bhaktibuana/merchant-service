@@ -9,54 +9,84 @@ const registerMerchant = (req, res) => {
     address: req.body.address,
   };
 
-  merchantModel.create(
-    [
-      merchantData.name,
-      merchantData.phone_number,
-      merchantData.password,
-      merchantData.address,
-    ],
+  merchantModel.findByPhoneNumber(
+    [merchantData.phone_number],
     (error, results) => {
       if (error) {
         res.status(500).json(error);
       } else {
-        res.status(200).json({
-          message: "Merchant has been registered.",
-        });
+        if (results[0].count > 1) {
+          res.status(400).json({
+            message: "Phone number is already registered.",
+          });
+        } else {
+          merchantModel.create(
+            [
+              merchantData.name,
+              merchantData.phone_number,
+              merchantData.password,
+              merchantData.address,
+            ],
+            (error, results) => {
+              if (error) {
+                res.status(500).json(error);
+              } else {
+                res.status(200).json({
+                  message: "Merchant has been registered.",
+                });
+              }
+            }
+          );
+        }
       }
     }
   );
 };
 
 const updateMerchant = (req, res) => {
-  const merchantId = parseInt(req.params.id);
+  const merchantId = res.locals.payload.id;
   const merchantData = {
     name: req.body.name,
     phone_number: req.body.phone_number,
     address: req.body.address,
   };
 
-  merchantModel.update(
-    [
-      merchantData.name,
-      merchantData.phone_number,
-      merchantData.address,
-      merchantId,
-    ],
+  merchantModel.findByPhoneNumber(
+    [merchantData.phone_number],
     (error, results) => {
       if (error) {
         res.status(500).json(error);
       } else {
-        res.status(200).json({
-          message: "Merchant has been updated.",
-        });
+        if (results[0].count > 1) {
+          res.status(400).json({
+            message: "Phone number is already exist.",
+          });
+        } else {
+          merchantModel.update(
+            [
+              merchantData.name,
+              merchantData.phone_number,
+              merchantData.address,
+              merchantId,
+            ],
+            (error, results) => {
+              if (error) {
+                res.status(500).json(error);
+              } else {
+                res.status(200).json({
+                  message: "Merchant has been updated.",
+                });
+              }
+            }
+          );
+        }
       }
     }
   );
 };
 
 const updateMerchantPassword = (req, res) => {
-  const merchantId = parseInt(req.params.id);
+  const merchantId = res.locals.payload.id;
   const merchantData = {
     password: passwordHash(req.body.new_password),
   };
@@ -76,7 +106,7 @@ const updateMerchantPassword = (req, res) => {
 };
 
 const softDeleteMerchant = (req, res) => {
-  const merchantId = parseInt(req.params.id);
+  const merchantId = res.locals.payload.id;
 
   merchantModel.softDelete([merchantId], (error, results) => {
     if (error) {
@@ -90,7 +120,7 @@ const softDeleteMerchant = (req, res) => {
 };
 
 const deleteMerchant = (req, res) => {
-  const merchantId = parseInt(req.params.id);
+  const merchantId = res.locals.payload.id;
 
   merchantModel.deleteProductByMerchant([merchantId], (error, results) => {
     if (error) {
