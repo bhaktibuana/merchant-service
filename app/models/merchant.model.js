@@ -1,5 +1,10 @@
 const db = require("../../config/dbConnection");
 
+const findByPhoneNumber = (params, callback) => {
+  const selectQuery = `SELECT COUNT(*) AS count FROM merchant WHERE phone_number = ?;`;
+  db.query(selectQuery, params, callback);
+};
+
 const create = (params, callback) => {
   const insertQuery = `INSERT INTO merchant (name, phone_number, password, address) VALUES (?, ?, ?, ?);`;
   db.query(insertQuery, params, callback);
@@ -36,6 +41,7 @@ const deleteProductByMerchant = (params, callbakck) => {
 };
 
 module.exports = {
+  findByPhoneNumber,
   create,
   update,
   updatePassword,
