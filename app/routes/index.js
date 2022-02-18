@@ -5,6 +5,7 @@ const loginRoutes = require("../controllers/login.controller");
 const productMiddleware = require("../middlewares/product.middleware");
 const merchantMiddleware = require("../middlewares/merchant.middleware");
 const loginMiddleware = require("../middlewares/login.middleware");
+const authMiddleware = require("../middlewares/auth.middleware");
 
 const router = express.Router();
 
@@ -15,18 +16,18 @@ router.get("/", (req, res) => {
 });
 
 // product router
-router.get("/product", productRoutes.getListProduct);
-router.post("/product", productMiddleware.productValidation, productRoutes.addProduct);
-router.put("/product/:id", productMiddleware.productValidation, productRoutes.updateProduct);
-router.put("/product/softDelete/:id", productRoutes.softDeleteProduct);
-router.delete("/product/:id", productRoutes.deleteProduct);
+router.get("/product", authMiddleware.isAuthenticate, productRoutes.getListProduct);
+router.post("/product", authMiddleware.isAuthenticate, productMiddleware.productValidation, productRoutes.addProduct);
+router.put("/product/:id", authMiddleware.isAuthenticate, productMiddleware.productValidation, productRoutes.updateProduct);
+router.put("/product/softDelete/:id", authMiddleware.isAuthenticate, productRoutes.softDeleteProduct);
+router.delete("/product/:id", authMiddleware.isAuthenticate, productRoutes.deleteProduct);
 
 // merchant router
 router.post("/merchant", merchantMiddleware.createValidation, merchantRoutes.registerMerchant);
-router.put("/merchant/:id", merchantMiddleware.updateValidation, merchantRoutes.updateMerchant);
-router.put("/merchant/updatePassword/:id", merchantMiddleware.updatePasswordValidation, merchantRoutes.updateMerchantPassword);
-router.put("/merchant/softDelete/:id", merchantMiddleware.deleteValidaiton, merchantRoutes.softDeleteMerchant);
-router.delete("/merchant/:id", merchantMiddleware.deleteValidaiton, merchantRoutes.deleteMerchant);
+router.put("/merchant", authMiddleware.isAuthenticate, merchantMiddleware.updateValidation, merchantRoutes.updateMerchant);
+router.put("/merchant/updatePassword", authMiddleware.isAuthenticate, merchantMiddleware.updatePasswordValidation, merchantRoutes.updateMerchantPassword);
+router.put("/merchant/softDelete", authMiddleware.isAuthenticate, merchantMiddleware.deleteValidaiton, merchantRoutes.softDeleteMerchant);
+router.delete("/merchant", authMiddleware.isAuthenticate, merchantMiddleware.deleteValidaiton, merchantRoutes.deleteMerchant);
 
 // login router
 router.post("/login", loginMiddleware.loginValidation, loginRoutes.login);
