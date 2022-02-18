@@ -71,7 +71,7 @@ const updateValidation = (req, res, next) => {
 };
 
 const updatePasswordValidation = (req, res, next) => {
-  const merchantId = parseInt(req.params.id);
+  const merchantId = res.locals.payload.id;
   const oldPassword = passwordHash(req.body.old_password);
 
   const data = {
@@ -113,7 +113,7 @@ const updatePasswordValidation = (req, res, next) => {
 };
 
 const deleteValidaiton = (req, res, next) => {
-  const merchantId = parseInt(req.params.id);
+  const merchantId = res.locals.payload.id;
   const password = req.body.password;
 
   merchantModel.getPassword([merchantId], (error, results) => {
