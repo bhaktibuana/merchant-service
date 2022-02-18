@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "2dc5dea5-7c5d-47c1-ac61-ca1dc06a1365",
+		"name": "merchant-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get list product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wind Ranger Dota 2 T-Shirt Premium",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "149000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Drow Ranger Dota 2 T-Shirt Premium",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "119000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/product/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "soft delete product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product/softDelete/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"softDelete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register merchant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Dota Store",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "081254897126",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty12345",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "qwerty12345",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Jl. Dota II/C No.65, Kec. Sukolilo, Kota SBY (60111)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/merchant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merchant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update merchant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Dota 2 Store",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "081254897123",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Jl. Dota 2 III/C No.65, Kec. Sukolilo, Kota SBY (60111)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/merchant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merchant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update merchant password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgMiBTdG9yZSIsInBob25lX251bWJlciI6IjA4MTI1NDg5NzEyMyIsImFkZHJlc3MiOiJKbC4gRG90YSAyIElJSS9DIE5vLjY1LCBLZWMuIFN1a29saWxvLCBLb3RhIFNCWSAoNjAxMTEpIiwiaWF0IjoxNjQ1MTk1ODc4LCJleHAiOjE2NDU4MDA2Nzh9.zaDYB-3l8WAg1fS0UTETU5n7FIApKwswhYCXST1Hi-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "old_password",
+							"value": "qwerty123456",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "qwerty1234567",
+							"type": "text"
+						},
+						{
+							"key": "new_password_confirmation",
+							"value": "qwerty1234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/merchant/updatePassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merchant",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "soft delete merchant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgMiBTdG9yZSIsInBob25lX251bWJlciI6IjA4MTI1NDg5NzEyMyIsImFkZHJlc3MiOiJKbC4gRG90YSAyIElJSS9DIE5vLjY1LCBLZWMuIFN1a29saWxvLCBLb3RhIFNCWSAoNjAxMTEpIiwiaWF0IjoxNjQ1MTk1OTEwLCJleHAiOjE2NDU4MDA3MTB9.VSuXMsO72clTqiWbOY7Qv2NAI9UmC0DcpMqT5dga1T0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "qwerty1234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/merchant/softDelete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merchant",
+						"softDelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete merchant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgMiBTdG9yZSIsInBob25lX251bWJlciI6IjA4MTI1NDg5NzEyMyIsImFkZHJlc3MiOiJKbC4gRG90YSAyIElJSS9DIE5vLjY1LCBLZWMuIFN1a29saWxvLCBLb3RhIFNCWSAoNjAxMTEpIiwiaWF0IjoxNjQ1MTk1OTEwLCJleHAiOjE2NDU4MDA3MTB9.VSuXMsO72clTqiWbOY7Qv2NAI9UmC0DcpMqT5dga1T0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "qwerty1234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/merchant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merchant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone_number",
+							"value": "081254897123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty1234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
