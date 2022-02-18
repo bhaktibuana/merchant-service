@@ -11,7 +11,7 @@ const login = (req, res) => {
       res.status(500).json(error);
     } else {
       if (results[0].count < 1) {
-        res.status(400).json({
+        res.status(404).json({
           message: "Phone number is not registered.",
         });
       } else {
