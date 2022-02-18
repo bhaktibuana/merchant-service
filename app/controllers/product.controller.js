@@ -38,9 +38,15 @@ const updateProduct = (req, res) => {
       if (error) {
         res.status(500).json(error);
       } else {
-        res.status(200).json({
-          message: "Product has been updated.",
-        });
+        if (results.affectedRows === 0) {
+          res.status(404).json({
+            message: `Product with id '${productId}' not found in your merchant.`,
+          });
+        } else {
+          res.status(200).json({
+            message: "Product has been updated.",
+          });
+        }
       }
     }
   );
@@ -54,9 +60,15 @@ const softDeleteProduct = (req, res) => {
     if (error) {
       res.status(500).json(error);
     } else {
-      res.status(200).json({
-        message: "Product has been soft deleted.",
-      });
+      if (results.affectedRows === 0) {
+        res.status(404).json({
+          message: `Product with id '${productId}' not found in your merchant.`,
+        });
+      } else {
+        res.status(200).json({
+          message: "Product has been soft deleted.",
+        });
+      }
     }
   });
 };
@@ -69,9 +81,15 @@ const deleteProduct = (req, res) => {
     if (error) {
       res.status(500).json(error);
     } else {
-      res.status(200).json({
-        message: "Product has been deleted.",
-      });
+      if (results.affectedRows === 0) {
+        res.status(404).json({
+          message: `Product with id '${productId}' not found in your merchant.`,
+        });
+      } else {
+        res.status(200).json({
+          message: "Product has been deleted.",
+        });
+      }
     }
   });
 };
