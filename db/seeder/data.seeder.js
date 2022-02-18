@@ -2,8 +2,8 @@ const db = require("../../config/dbConnection");
 const crypto = require("crypto");
 
 const dataMerchant = {
-  name: "Dummy Merchant",
-  phone_number: "081233548796",
+  name: "Valorant Store",
+  phone_number: "081235971089",
   password: "qwerty12345",
   address:
     "Jl. Dummy No.51A RT.03/RW.01, Kec. Sukolilo, Kota SBY, Jawa Timur 60111",
@@ -31,15 +31,21 @@ db.query(
 const dataProduct = [
   {
     merchant_id: 1,
-    name: "Dummy Product 1",
-    quantity: 2,
-    price: 10000,
+    name: "Jett Valorant T-Shirt Premium Duelist Series",
+    quantity: 10,
+    price: 149000,
   },
   {
     merchant_id: 1,
-    name: "Dummy Product 2",
-    quantity: 3,
-    price: 12500,
+    name: "Chamber Valorant T-Shirt Premium Sentinel Series",
+    quantity: 10,
+    price: 149000,
+  },
+  {
+    merchant_id: 1,
+    name: "Omen Valorant Hoodie Premium Controller Series",
+    quantity: 5,
+    price: 219000,
   },
 ];
 
