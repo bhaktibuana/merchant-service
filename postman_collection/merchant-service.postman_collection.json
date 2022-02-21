@@ -13,7 +13,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTQ1MTE2NywiZXhwIjoxNjQ2MDU1OTY3fQ.19XYe5aTDiDlYXrGbAWw-_ohrlSKY7tHzFzJCCozTZE",
 							"type": "string"
 						}
 					]
@@ -42,7 +42,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTQ1MTE2NywiZXhwIjoxNjQ2MDU1OTY3fQ.19XYe5aTDiDlYXrGbAWw-_ohrlSKY7tHzFzJCCozTZE",
 							"type": "string"
 						}
 					]
@@ -50,24 +50,13 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "name",
-							"value": "Wind Ranger Dota 2 T-Shirt Premium",
-							"type": "text"
-						},
-						{
-							"key": "quantity",
-							"value": "15",
-							"type": "text"
-						},
-						{
-							"key": "price",
-							"value": "149000",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Wind Ranger Dota 2 T-Shirt Premium\",\n    \"quantity\": 15,\n    \"price\": 149000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
 					"raw": "http://localhost:3000/product",
@@ -91,7 +80,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTQ1MTE2NywiZXhwIjoxNjQ2MDU1OTY3fQ.19XYe5aTDiDlYXrGbAWw-_ohrlSKY7tHzFzJCCozTZE",
 							"type": "string"
 						}
 					]
@@ -99,24 +88,13 @@
 				"method": "PUT",
 				"header": [],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "name",
-							"value": "Drow Ranger Dota 2 T-Shirt Premium",
-							"type": "text"
-						},
-						{
-							"key": "quantity",
-							"value": "10",
-							"type": "text"
-						},
-						{
-							"key": "price",
-							"value": "119000",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Drow Ranger Dota 2 T-Shirt Premium\",\n    \"quantity\": 10,\n    \"price\": 119000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
 					"raw": "http://localhost:3000/product/4",
@@ -141,7 +119,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTQ1MTE2NywiZXhwIjoxNjQ2MDU1OTY3fQ.19XYe5aTDiDlYXrGbAWw-_ohrlSKY7tHzFzJCCozTZE",
 							"type": "string"
 						}
 					]
@@ -172,7 +150,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTQ1MTE2NywiZXhwIjoxNjQ2MDU1OTY3fQ.19XYe5aTDiDlYXrGbAWw-_ohrlSKY7tHzFzJCCozTZE",
 							"type": "string"
 						}
 					]
@@ -200,34 +178,13 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "name",
-							"value": "Dota Store",
-							"type": "text"
-						},
-						{
-							"key": "phone_number",
-							"value": "081254897126",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "qwerty12345",
-							"type": "text"
-						},
-						{
-							"key": "password_confirmation",
-							"value": "qwerty12345",
-							"type": "text"
-						},
-						{
-							"key": "address",
-							"value": "Jl. Dota II/C No.65, Kec. Sukolilo, Kota SBY (60111)",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dota Store\",\n    \"phone_number\": \"081254897126\",\n    \"password\": \"qwerty12345\",\n    \"password_confirmation\": \"qwerty12345\",\n    \"address\": \"Jl. Dota II/C No.65, Kec. Sukolilo, Kota SBY (60111)\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
 					"raw": "http://localhost:3000/merchant",
@@ -251,7 +208,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTE5NTAxMiwiZXhwIjoxNjQ1Nzk5ODEyfQ.EUiueA-ZRWLwn5A2sA88kBIu7GIF5nIqYJ6dRxBi_XM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTQ1MTE2NywiZXhwIjoxNjQ2MDU1OTY3fQ.19XYe5aTDiDlYXrGbAWw-_ohrlSKY7tHzFzJCCozTZE",
 							"type": "string"
 						}
 					]
@@ -259,24 +216,13 @@
 				"method": "PUT",
 				"header": [],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "name",
-							"value": "Dota 2 Store",
-							"type": "text"
-						},
-						{
-							"key": "phone_number",
-							"value": "081254897123",
-							"type": "text"
-						},
-						{
-							"key": "address",
-							"value": "Jl. Dota 2 III/C No.65, Kec. Sukolilo, Kota SBY (60111)",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dota 2 Store\",\n    \"phone_number\": \"081254897126\",\n    \"address\": \"Jl. Dota 2 III/C No.65, Kec. Sukolilo, Kota SBY (60111)\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
 					"raw": "http://localhost:3000/merchant",
@@ -300,7 +246,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgMiBTdG9yZSIsInBob25lX251bWJlciI6IjA4MTI1NDg5NzEyMyIsImFkZHJlc3MiOiJKbC4gRG90YSAyIElJSS9DIE5vLjY1LCBLZWMuIFN1a29saWxvLCBLb3RhIFNCWSAoNjAxMTEpIiwiaWF0IjoxNjQ1MTk1ODc4LCJleHAiOjE2NDU4MDA2Nzh9.zaDYB-3l8WAg1fS0UTETU5n7FIApKwswhYCXST1Hi-A",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTQ1MTE2NywiZXhwIjoxNjQ2MDU1OTY3fQ.19XYe5aTDiDlYXrGbAWw-_ohrlSKY7tHzFzJCCozTZE",
 							"type": "string"
 						}
 					]
@@ -308,24 +254,13 @@
 				"method": "PUT",
 				"header": [],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "old_password",
-							"value": "qwerty123456",
-							"type": "text"
-						},
-						{
-							"key": "new_password",
-							"value": "qwerty1234567",
-							"type": "text"
-						},
-						{
-							"key": "new_password_confirmation",
-							"value": "qwerty1234567",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\n    \"old_password\": \"qwerty12345\",\n    \"new_password\": \"qwerty123456\",\n    \"new_password_confirmation\": \"qwerty123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
 					"raw": "http://localhost:3000/merchant/updatePassword",
@@ -350,7 +285,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgMiBTdG9yZSIsInBob25lX251bWJlciI6IjA4MTI1NDg5NzEyMyIsImFkZHJlc3MiOiJKbC4gRG90YSAyIElJSS9DIE5vLjY1LCBLZWMuIFN1a29saWxvLCBLb3RhIFNCWSAoNjAxMTEpIiwiaWF0IjoxNjQ1MTk1OTEwLCJleHAiOjE2NDU4MDA3MTB9.VSuXMsO72clTqiWbOY7Qv2NAI9UmC0DcpMqT5dga1T0",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTQ1MTE2NywiZXhwIjoxNjQ2MDU1OTY3fQ.19XYe5aTDiDlYXrGbAWw-_ohrlSKY7tHzFzJCCozTZE",
 							"type": "string"
 						}
 					]
@@ -358,14 +293,13 @@
 				"method": "PUT",
 				"header": [],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "password",
-							"value": "qwerty1234567",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"qwerty123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
 					"raw": "http://localhost:3000/merchant/softDelete",
@@ -390,7 +324,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgMiBTdG9yZSIsInBob25lX251bWJlciI6IjA4MTI1NDg5NzEyMyIsImFkZHJlc3MiOiJKbC4gRG90YSAyIElJSS9DIE5vLjY1LCBLZWMuIFN1a29saWxvLCBLb3RhIFNCWSAoNjAxMTEpIiwiaWF0IjoxNjQ1MTk1OTEwLCJleHAiOjE2NDU4MDA3MTB9.VSuXMsO72clTqiWbOY7Qv2NAI9UmC0DcpMqT5dga1T0",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkRvdGEgU3RvcmUiLCJwaG9uZV9udW1iZXIiOiIwODEyNTQ4OTcxMjYiLCJhZGRyZXNzIjoiSmwuIERvdGEgSUkvQyBOby42NSwgS2VjLiBTdWtvbGlsbywgS290YSBTQlkgKDYwMTExKSIsImlhdCI6MTY0NTQ1MTE2NywiZXhwIjoxNjQ2MDU1OTY3fQ.19XYe5aTDiDlYXrGbAWw-_ohrlSKY7tHzFzJCCozTZE",
 							"type": "string"
 						}
 					]
@@ -398,14 +332,13 @@
 				"method": "DELETE",
 				"header": [],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "password",
-							"value": "qwerty1234567",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"qwerty123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
 					"raw": "http://localhost:3000/merchant",
@@ -427,19 +360,13 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "phone_number",
-							"value": "081254897123",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "qwerty1234567",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\n    \"phone_number\": \"081254897126\",\n    \"password\": \"qwerty12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
 					"raw": "http://localhost:3000/login",
