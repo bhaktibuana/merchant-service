@@ -9,7 +9,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use("/", router);
+app.use("/", router.index);
+app.use("/", router.loginRouter);
+app.use("/", router.merchantRouter);
+app.use("/", router.productRouter);
 
 app.listen(PORT, () => {
   console.log("Server is listening on", PORT);
