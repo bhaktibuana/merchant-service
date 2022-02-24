@@ -5,15 +5,14 @@ const productRouter = require("./product.route");
 
 const router = express.Router();
 
+router.use("/", loginRouter);
+router.use("/", merchantRouter);
+router.use("/", productRouter);
+
 router.get("/", (req, res) => {
   res.status(200).json({
     message: "Merchant Service API Server.",
   });
 });
 
-module.exports = {
-  index: router,
-  loginRouter,
-  merchantRouter,
-  productRouter,
-};
+module.exports = router;

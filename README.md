@@ -1,7 +1,23 @@
 # merchant-service
 
+## Description
+
 merchat-service is a mini-project from Dibimbing course in the form Backend API Server Development. This project used for merchant service of a e-commerce to handle the catalog of products owned by merchants. This project uses [ExpressJs](https://www.npmjs.com/package/express) framework and MySQL as the database.
 This project can be accessed online at [https://buana-merchantservice.herokuapp.com](https://buana-merchantservice.herokuapp.com) or you can follow this documentation to use locally on your computer.
+
+## What's in this app?
+
+- REST API
+- Database
+- JSON Web Token
+- Authentication and Authorization
+- Data Secure HASH Algorithm (SHA-256)
+
+# Architectur Diagram
+![merchant-service architecture diagram](./images/merchant-service.diagram.png)
+
+# Entity Relationship Diagram
+![merchant-service entity relationship diagram](./images/merchant-service.erd.png)
 
 # Installation
 
@@ -37,8 +53,8 @@ module.exports = db;
 - The first of all that you have to do is install MySQL database on your computer (this only if you don't have MySQL database yet).
 - Open **./config/dbConnection.js** and you will see the code like 1st method above.
 - Change the value of **host**, **user** and **password** to your MySQL configuration. If you use another port for your MySQL you can add new **port** property on it.
-- In the root project directory open your terminal and run `node ./db/migration/table.migration.js`. It will create the tables that needed.
-- After create the tables you can insert the dummy datas into it by running `node ./db/seeder/data.seeder.js` (optional).
+- In the root project directory open your terminal and run `npm run migrate`. It will create the tables that needed.
+- After create the tables you can insert the dummy datas into it by running `npm run seeder` (optional).
 
 # Run The App
 
